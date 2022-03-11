@@ -10,7 +10,7 @@ import { useSizeProp } from '@element-plus/hooks'
 import type Input from './input.vue'
 import type { StyleValue, ExtractPropTypes } from 'vue'
 
-type AutoSize = { minRows?: number; maxRows?: number } | boolean
+export type InputAutoSize = { minRows?: number; maxRows?: number } | boolean
 
 export const inputProps = buildProps({
   size: useSizeProp,
@@ -28,7 +28,7 @@ export const inputProps = buildProps({
     values: ['none', 'both', 'horizontal', 'vertical'],
   },
   autosize: {
-    type: definePropType<AutoSize>([Boolean, Object]),
+    type: definePropType<InputAutoSize>([Boolean, Object]),
     default: false,
   },
   autocomplete: {
